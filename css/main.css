@@ -1,0 +1,295 @@
+/* Start Global Rules */
+/* @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,900&family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: white;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --main-section-backround : #0d1117 ;
+    --section-background:  #1b2126;
+    --main-text-color : white;
+    --sec-text-color : rgb(150 155 165);
+    --progress-color:rgba(238, 238, 238, 0.299) ;
+    --project-color: #2831393d;
+}
+html {
+    scroll-behavior: smooth;
+
+}
+body {
+    font-family: 'Epilogue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+  /* x-Small */
+@media (min-width: 595px) {
+    .container {
+    width: 570px;
+    }
+}
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+        }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start SignUp */
+.sign-page {
+    background-color: #eee;
+    height: 110vh;
+    padding: 100px 0 50px;
+    position: relative;
+    /* margin-bottom: 50px; */
+}
+
+.sign-page .container {
+    display: flex;
+}
+.sign-page .container .left-section {
+    text-align: center;
+    padding: 100px;
+    background-color: #ffffff;
+
+}
+.sign-page .container .left-section h2 {
+    color: #1787e0;
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.sign-page .container .left-section p {
+    color: #b2b2b2;
+    font-size: 13px;
+}
+.sign-page .container .left-section .icons {
+    margin-bottom: 15px;
+}
+.sign-page .container .left-section .icons i {
+    margin-right: 20px;
+    position: relative;
+}
+.sign-page .container .left-section .icons i::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #eee;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.sign-page .container .left-section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sign-page .container .left-section form input {
+    padding: 0 30px;
+    width: 300px;
+    height: 40px;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 13px;
+    color: #6c6c6c;
+}
+.sign-page .container .left-section form input:focus {
+    outline: 2px solid #1787e0;
+    /* border: 1px solid #1787e0; */
+}
+/* .sign-page .container .left-section form input::placeholder {
+    font-size: 10px;
+    position: absolute;
+    top: -10px;
+} */
+.sign-page .container .left-section form input[type="text"]::before {
+    content: "\f007";
+}
+.sign-page .container .left-section form input.text.active {
+    border-radius: 1px solid #de0000;
+}
+.sign-page .container .left-section form input[type="submit"] {
+    width: 100px;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #1787e0;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 10px ;
+    cursor: pointer;
+}
+.sign-page .container .left-section form div {
+    position: relative;
+}
+.sign-page .container .left-section form div::before {
+    z-index: 1;
+    font-family: "Font Awesome 6 Free";
+    font-size: 14px;
+    font-weight: 100;
+    position: absolute;
+    left: 3%;
+    top: 22%;
+    color: #6c6c6c;
+}
+.sign-page .container .left-section form div.text::before {
+    content: "\f007";
+}
+.sign-page .container .left-section form div.email::before {
+    content: "\f0e0";
+}
+.sign-page .container .left-section form div.password::before {
+    content: "\f023";
+    font-weight: 600;
+}
+.sign-page .container .left-section form div.password {
+    display: flex;
+    position: relative;
+}
+.sign-page .container .left-section form div.password i {
+    color: #6c6c6c;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.sign-page .container .left-section form div.password i:hover {
+    color: #0d1117;
+}
+.sign-page .container .right-section {
+    background-color: #1787e0;
+    padding: 100px;
+    width: 636.55px;
+}
+
+.sign-page .container .right-section .img-box {
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.sign-page .container .right-section .img-box h2 {
+    font-weight: 600;
+}
+
+.sign-page .container .right-section img {
+    max-width: 100%;
+    height: 250px;
+}
+.bullets {
+    display: flex;
+    justify-content: center;
+}
+.bullets span {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 10px;
+    transition: 0.3s;
+    opacity: 0.5;
+}
+.bullets span.active {
+    opacity: 1;
+}
+/* .bullets span:not(:hover) {
+    opacity: 0.5;
+} */
+.bullets span:hover {
+    width: 20px;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    background-color: #00000079;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.overlay .popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+    width: 450px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.overlay .popup-box img {
+    width: 80px;
+    margin: -30px auto 0;
+
+    /* position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+.overlay .popup-box .text {
+    margin: 15px auto;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+.overlay .popup-box p {
+    margin: 0 auto;
+    font-size: 13px;
+    color: #6c6c6c;
+}
+.overlay.hide {
+    display: none;
+}
+@media (max-width : 769px) {
+    .sign-page .container {
+        flex-direction: column;
+    }
+}
+/* End SignUp */
